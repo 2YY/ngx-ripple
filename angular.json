@@ -124,6 +124,41 @@
           }
         }
       }
+    },
+    "lib-ngx-ripple": {
+      "projectType": "library",
+      "root": "projects/lib-ngx-ripple",
+      "sourceRoot": "projects/lib-ngx-ripple/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/lib-ngx-ripple/tsconfig.lib.json",
+            "project": "projects/lib-ngx-ripple/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/lib-ngx-ripple/src/test.ts",
+            "tsConfig": "projects/lib-ngx-ripple/tsconfig.spec.json",
+            "karmaConfig": "projects/lib-ngx-ripple/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/lib-ngx-ripple/tsconfig.lib.json",
+              "projects/lib-ngx-ripple/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "ngx-ripple"
 }

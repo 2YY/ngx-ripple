@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "lib-ngx-ripple": [
+        "dist/lib-ngx-ripple"
+      ],
+      "lib-ngx-ripple/*": [
+        "dist/lib-ngx-ripple/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
