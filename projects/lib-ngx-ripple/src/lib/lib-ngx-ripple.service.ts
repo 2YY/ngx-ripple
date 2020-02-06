@@ -11,7 +11,7 @@ interface ActiveRipple {
 })
 export class LibNgxRippleService {
 
-  activeRippleReferences: ActiveRipple[] = [];
+  private activeRippleReferences: ActiveRipple[] = [];
 
   show(matRipple: MatRipple, config?: RippleConfig) {
     const rippleRef = matRipple.launch(config || {
