@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'lib-lib-ngx-ripple',
+  selector: 'lib-ngx-ripple',
   template: `
     <p>
       lib-ngx-ripple works!
