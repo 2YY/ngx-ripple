@@ -9,7 +9,7 @@ import {MatRipple} from '@angular/material/core';
 })
 export class AppComponent {
 
-  @ViewChild('btnExample', {read: MatRipple, static: false}) btnExampleRef: MatRipple;
+  @ViewChild('btnExample', { read: MatRipple }) btnExampleRef: MatRipple;
 
   constructor(public rippleService: LibNgxRippleService) {}
 
