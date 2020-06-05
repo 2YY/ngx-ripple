@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {MatRipple, RippleConfig, RippleRef} from '@angular/material/core';
 
 interface ActiveRipple {
@@ -9,7 +9,7 @@ interface ActiveRipple {
 @Injectable({
   providedIn: 'root'
 })
-export class LibNgxRippleService {
+export class NgxRippleService {
 
   private activeRippleReferences: ActiveRipple[] = [];
 

@@ -19,11 +19,9 @@
       "dom"
     ],
     "paths": {
-      "lib-ngx-ripple": [
-        "dist/lib-ngx-ripple"
-      ],
-      "lib-ngx-ripple/*": [
-        "dist/lib-ngx-ripple/*"
+      "ngx-ripple": [
+        "dist/ngx-ripple/ngx-ripple",
+        "dist/ngx-ripple"
       ]
     }
   },
