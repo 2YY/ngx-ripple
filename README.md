@@ -4,28 +4,25 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/5a1a3a8851b0c322b628/maintainability)](https://codeclimate.com/github/2YY/ngx-ripple/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/5a1a3a8851b0c322b628/test_coverage)](https://codeclimate.com/github/2YY/ngx-ripple/test_coverage)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.24.
+## Motivation
 
-## Development server
+By default, [Ripples](https://material.angular.io/components/ripple/overview) triggered by click event.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+But, if you want trigger Ripples by mouseenter event, you can achieve it with `NgxRippleService`.
 
-## Code scaffolding
+## Usage
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+In your `foo.component.ts`:
 
-## Build
+    @ViewChild('btn', {read: MatRipple}) btnRef: MatRipple;
+    
+    constructor(public rippleService: NgxRippleService) {}
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Then, in your `foo.component.html`:
 
-## Running unit tests
+`<button #btn matRipple (mouseenter)="rippleService.show(btnRef)" (mouseleave)="rippleService.hide(btnRef)">My Button</button>`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## License
 
-## Running end-to-end tests
+[MIT License](./LICENSE)
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
