@@ -1,24 +1,32 @@
 # NgxRipple
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.7.
+![CI](https://github.com/2YY/ngx-ripple/workflows/CI/badge.svg)
+[![Maintainability](https://api.codeclimate.com/v1/badges/5a1a3a8851b0c322b628/maintainability)](https://codeclimate.com/github/2YY/ngx-ripple/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/5a1a3a8851b0c322b628/test_coverage)](https://codeclimate.com/github/2YY/ngx-ripple/test_coverage)
 
-## Code scaffolding
+## Installation
 
-Run `ng generate component component-name --project ngx-ripple` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-ripple`.
-> Note: Don't forget to add `--project ngx-ripple` or else it will be added to the default project in your `angular.json` file. 
+`npm i 2yy-ngx-ripple`
 
-## Build
+## Motivation
 
-Run `ng build ngx-ripple` to build the project. The build artifacts will be stored in the `dist/` directory.
+By default, [Ripples](https://material.angular.io/components/ripple/overview) triggered by click event.
 
-## Publishing
+But, if you want trigger Ripples by mouseenter event, you can achieve it with `NgxRippleService`.
 
-After building your library with `ng build ngx-ripple`, go to the dist folder `cd dist/ngx-ripple` and run `npm publish`.
+## Usage
 
-## Running unit tests
+In your `foo.component.ts`:
 
-Run `ng test ngx-ripple` to execute the unit tests via [Karma](https://karma-runner.github.io).
+    @ViewChild('btn', {read: MatRipple}) btnRef: MatRipple;
+    
+    constructor(public rippleService: NgxRippleService) {}
 
-## Further help
+Then, in your `foo.component.html`:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+`<button #btn matRipple (mouseenter)="rippleService.show(btnRef)" (mouseleave)="rippleService.hide(btnRef)">My Button</button>`
+
+## License
+
+[MIT License](./LICENSE)
+

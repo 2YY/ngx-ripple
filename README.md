@@ -4,6 +4,10 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/5a1a3a8851b0c322b628/maintainability)](https://codeclimate.com/github/2YY/ngx-ripple/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/5a1a3a8851b0c322b628/test_coverage)](https://codeclimate.com/github/2YY/ngx-ripple/test_coverage)
 
+## Installation
+
+`npm i 2yy-ngx-ripple`
+
 ## Motivation
 
 By default, [Ripples](https://material.angular.io/components/ripple/overview) triggered by click event.
